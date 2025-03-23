@@ -1,4 +1,4 @@
-package bolentin1.ejercicio4;
+package boletin1.ejercicio4;
 
 /**
  * Clase que representa una televisión, que hereda de Electrodomestico.

@@ -1,4 +1,4 @@
-package bolentin1.ejercicio4;
+package boletin1.ejercicio4;
 
 import java.util.ArrayList;
 
