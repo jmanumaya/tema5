@@ -1,5 +1,6 @@
 package interfaces.ejercicio1;
 
+// Implementacion interfaz comparable
 public class Socio implements Comparable<Socio>{
 	
 	private int id;
