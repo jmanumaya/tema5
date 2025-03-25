@@ -1,4 +1,4 @@
-package bolentin1.ejercicio4;
+package boletin1.ejercicio4;
 
 /**
  * Clase que representa un electrodoméstico con atributos como precio base, color, consumo energético y peso.
