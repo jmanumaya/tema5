@@ -2,76 +2,104 @@ package interfaces.ejercicio2;
 
 import java.util.Objects;
 
-public class Futbolista implements Comparable <Futbolista>{
-	
-	private int numeroCamiseta;
-	
-	private String nombre;
+/**
+ * La clase Futbolista representa a un jugador de fútbol.
+ * Implementa la interfaz Comparable para permitir la comparación de objetos Futbolista
+ * basada en su número de camiseta y nombre.
+ */
+public class Futbolista implements Comparable<Futbolista> {
 
-	private int edad;
-	
-	private int numeroGoles;
+    /**
+     * Número de camiseta del futbolista.
+     */
+    private int numeroCamiseta;
 
-	public Futbolista(int numeroCamiseta, String nombre, int edad, int numeroGoles) {
-		this.numeroCamiseta = numeroCamiseta;
-		this.nombre = nombre;
-		this.edad = edad;
-		this.numeroGoles = numeroGoles;
-	}
-	
-	@Override
-	public int compareTo(Futbolista otherFutbolista) {
-		
-		int estado = 0;
-		
-//		if(numeroCamiseta != otherFutbolista.numeroCamiseta) {
-//			
-//			if (numeroCamiseta > otherFutbolista.numeroCamiseta) {
-//				estado = 1;
-//			} else if (otherFutbolista.numeroCamiseta > numeroCamiseta){
-//				estado = -1;
-//			}
-//			
-//		} else if (!nombre.equals(otherFutbolista.nombre)){
-//			
-//			if (nombre > otherFutbolista.nombre) {
-//				estado = 1;
-//			} else if (otherFutbolista.numeroCamiseta > numeroCamiseta){
-//				estado = -1;
-//			}
-//			
-//		}
-//		
-//		if(this.id > otherFutbolista.id) {
-//			estado = 1;
-//		} else if (otherFutbolista.id > this.id) {
-//			estado = -1;
-//		}
-		estado=numeroCamiseta-otherFutbolista.numeroCamiseta;
-		if(estado==0) {
-			estado=this.nombre.compareTo(otherFutbolista.nombre);
-		}
-		
-		return estado;
-	}
+    /**
+     * Nombre del futbolista.
+     */
+    private String nombre;
 
-	@Override
-	public String toString() {
-		return "Futbolista [numeroCamiseta=" + numeroCamiseta + ", nombre=" + nombre + ", edad=" + edad
-				+ ", numeroGoles=" + numeroGoles + "]";
-	}
+    /**
+     * Edad del futbolista.
+     */
+    private int edad;
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(nombre, numeroCamiseta);
-	}
+    /**
+     * Número de goles marcados por el futbolista.
+     */
+    private int numeroGoles;
 
-	@Override
-	public boolean equals(Object obj) {
-		
-		Futbolista other = (Futbolista) obj;
-		
-		return nombre.equals(other.nombre) && numeroCamiseta == other.numeroCamiseta;
-	}
-	
+    /**
+     * Constructor para crear un nuevo objeto Futbolista.
+     *
+     * @param numeroCamiseta El número de camiseta del futbolista.
+     * @param nombre         El nombre del futbolista.
+     * @param edad           La edad del futbolista.
+     * @param numeroGoles    El número de goles marcados por el futbolista.
+     */
+    public Futbolista(int numeroCamiseta, String nombre, int edad, int numeroGoles) {
+        this.numeroCamiseta = numeroCamiseta;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.numeroGoles = numeroGoles;
+    }
+
+    /**
+     * Compara este objeto Futbolista con otro objeto Futbolista.
+     * Primero compara por número de camiseta y, si son iguales, compara por nombre.
+     *
+     * @param otherFutbolista El objeto Futbolista a comparar.
+     * @return Un valor negativo si este futbolista es menor, cero si son iguales,
+     * o un valor positivo si este futbolista es mayor.
+     */
+    @Override
+    public int compareTo(Futbolista otherFutbolista) {
+
+        int estado = 0;
+
+        estado = numeroCamiseta - otherFutbolista.numeroCamiseta;
+
+        if (estado == 0) {
+            estado = this.nombre.compareTo(otherFutbolista.nombre);
+        }
+
+        return estado;
+    }
+
+    /**
+     * Devuelve una representación en cadena del objeto Futbolista.
+     *
+     * @return Una cadena que representa el objeto Futbolista en el formato:
+     * "[nombre], Número [numeroCamiseta] con [numeroGoles] goles y [edad] años.".
+     */
+    @Override
+    public String toString() {
+        return nombre + ", Número " + numeroCamiseta + " con " + numeroGoles + " goles y " + edad + " años.";
+    }
+
+    /**
+     * Calcula el código hash del objeto Futbolista basado en su nombre y número de camiseta.
+     *
+     * @return El código hash del objeto.
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, numeroCamiseta);
+    }
+
+    /**
+     * Compara este objeto Futbolista con otro objeto para verificar si son iguales.
+     * Dos futbolistas se consideran iguales si tienen el mismo nombre y número de camiseta.
+     *
+     * @param obj El objeto a comparar.
+     * @return true si los objetos son iguales, false en caso contrario.
+     */
+    @Override
+    public boolean equals(Object obj) {
+
+        Futbolista other = (Futbolista) obj;
+
+        return nombre.equals(other.nombre) && numeroCamiseta == other.numeroCamiseta;
+    }
+
 }

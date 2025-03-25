@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		// Creación de socios
+
 		Socio s1 = new Socio(1, "Jose", 15);
 		
 		Socio s2 = new Socio(2, "Juliano", 10);
