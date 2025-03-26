@@ -21,7 +21,7 @@ public class Rectangulo extends Poligono{
      * Inicializa un rectángulo con lados de longitud 1 y llama al constructor de la superclase Poligono con 2 lados.
      */
     public Rectangulo() {
-        super(2);
+        super(4);
     }
 
     /**
@@ -32,7 +32,7 @@ public class Rectangulo extends Poligono{
      * @param lado2 La longitud del segundo lado del rectángulo.
      */
     public Rectangulo(double lado1, double lado2) {
-        super(2);
+        super(4);
         this.lado1 = lado1;
         this.lado2 = lado2;
     }
