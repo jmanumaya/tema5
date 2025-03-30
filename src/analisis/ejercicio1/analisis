@@ -1,0 +1,79 @@
+Vehículo (Clase Abstracta)
+
+    - marca: String
+
+    - modelo: String
+
+    - color: String
+
+    - matrícula: String
+
+    - motorEncendido: boolean
+
+    - marchaActual: int
+
+    - velocidadActual: double
+
+    + arrancar() : void
+
+    + parar() : void
+
+    + subirMarcha() : void
+
+    + bajarMarcha() : void
+
+    + abstract detallesEspecíficos() : void
+
+Turismo extends Vehículo
+
+    - numeroPlazas: int
+
+    - tipoUso: String (profesional/particular)
+
+Heredados:
+
+    + detallesEspecíficos() : void
+
+    + arrancar() : void
+
+    + parar() : void
+
+    + subirMarcha() : void
+
+    + bajarMarcha() : void
+
+Camión extends Vehículo
+
+    - pesoMaximoAutorizado: double
+
+    - transportaMercanciaPeligrosa: boolean
+
+Heredados:
+
+    + detallesEspecíficos() : void
+
+    + arrancar() : void
+
+    + parar() : void
+
+    + subirMarcha() : void
+
+    + bajarMarcha() : void
+
+Motocicleta extends Vehículo
+
+    - cilindrada: int
+
+    + requiereCarnet() : boolean
+
+Heredados:
+
+    + detallesEspecíficos() : void
+
+    + arrancar() : void
+
+    + parar() : void
+
+    + subirMarcha() : void
+
+    + bajarMarcha() : void
