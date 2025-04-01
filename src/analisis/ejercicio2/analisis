@@ -1,0 +1,28 @@
+class abstracta Ficha:
+		- int id
+		- String titulo
+	Metodos:
+		+ prestar (abstracto)
+		+ Getters
+
+class Libro extends Ficha:
+		- String autor
+		- String editorial
+	Metodos:
+		+ Getters
+		+ prestar
+		
+class DVD extends Ficha:
+		- String director
+		- int año
+		- enum tipo (pelicula, documental, serie)
+	Metodos:
+		+ Getters
+		+ prestar
+		
+class Revista extends Ficha:
+		- int numero
+		- int año
+	Metodos:
+		+ Getters
+		+ prestar
