@@ -16,9 +16,15 @@ public class Principal {
 		
 		Arrays.sort(tabla);
 		
-		for(Socio sc : tabla) {
-			System.out.println(sc);
-		}
+		System.out.println(Arrays.toString(tabla));
+		
+		Arrays.sort(tabla, new ComparaNombres());
+		
+		System.out.println(Arrays.toString(tabla));
+		
+		Arrays.sort(tabla, new ComparaEdad());
+		
+		System.out.println(Arrays.toString(tabla));
 	}
 
 }
