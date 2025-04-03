@@ -1,0 +1,68 @@
+class CuentaBancaria
+
+                ATRIBUTOS:
+                        - int numCuenta
+                        - double saldo
+                        - int numTitulares
+                        - list<Titular> titulares
+                        - static int numCuentaGeneral // Atributo estático para generar números de cuenta únicos.
+
+                MÉTODOS:
+                        + getters / setters
+                        + ingresar
+                        + retirar
+                        + pagar // Realiza un pago directo (no es lo mismo que retirar ya que aquí si te puedes pasar a saldo negativo)
+                        + addTitular
+                        + deleteTitular
+                        + equals / hash
+                        + toString
+
+class Titular
+
+                ATRIBUTOS:
+                        - String dni
+                        - String nombre
+                        - String apellidos
+                        - int telefono
+
+                MÉTODOS:
+                        + getters / setters
+                        + equals / hash
+                        + toString
+
+class CuentaAhorro extends CuentaBancaria
+
+                ATRIBUTOS:
+                        - double cuotaMantenimiento
+                        - double interesAnual
+
+                MÉTODOS:
+                        + getters / setters
+                        + saldoInteres()
+                        + restarCuota()
+                        + toString
+
+class CuentaCorriente extends CuentaBancaria
+
+                ATRIBUTOS:
+                        - double porcentajeTransaccion
+                        - int numTransacciones
+                        - list<Transaccion> transacciones
+
+                MÉTODOS:
+                        + getters / setters
+                        + addTransaccion
+                        + toString
+
+class Transaccion
+
+                ATRIBUTOS:
+                        - int dia
+                        - int mes
+                        - int anno
+                        - String concepto
+                        - double importe
+
+                MÉTODOS:
+                        + getters
+                        + toString
