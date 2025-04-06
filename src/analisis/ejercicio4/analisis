@@ -1,0 +1,35 @@
+class contacto
+
+	atributos:
+	
+		- String nombre
+		- int telefono
+	
+	metodos:
+	
+		+ constructor(nombre, telefono)
+		+ geters/seters
+		+ equals (iguales si nombres son iguales)
+		
+class contactoPersona extends contacto
+
+	atributos:
+
+		- String cumpleaños
+		
+	metodos:
+	
+		+ constructor(super(nombre, telefono), cumpleaños)
+		+ geters/seters
+
+class contactoEmpresa extends contacto
+
+	atributos:
+
+		- String paginaWeb
+		
+	metodos:
+	
+		+ constructor(super(nombre, telefono), paginaWeb)
+		+ geters/seters		
+	
