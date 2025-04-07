@@ -4,8 +4,10 @@ import java.util.*;
 
 /**
  * Representa a un titular de una cuenta bancaria con información personal como DNI, nombre, apellidos y teléfono.
+ * 
+ * Implementa la interfaz Comparable para ordenar por defecto los titulares por DNI en orden ascendente.
  */
-public class Titular {
+public class Titular implements Comparable<Titular>{
 	
 	/**
 	 * Documento Nacional de Identidad del titular.
@@ -130,6 +132,17 @@ public class Titular {
 	@Override
 	public String toString() {
 		return "Titular don/dña " + apellidos + ", " + nombre + ", con DNI " + dni + " y número telefónico " + telefono;
+	}
+	
+	/**
+	 * Compara este titular con otro segun el DNI en orden ascendente.
+	 *
+	 * @param other El otro titular a comparar
+	 * @return Un valor negativo, cero o positivo según el orden por DNI.
+	 */
+	@Override
+	public int compareTo(Titular other) {
+		return dni.compareTo(other.dni);
 	}
 
 }
