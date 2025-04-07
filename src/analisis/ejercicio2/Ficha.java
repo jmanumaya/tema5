@@ -4,7 +4,7 @@ package analisis.ejercicio2;
  * Clase abstracta que representa una ficha genérica para objetos de una biblioteca.
  * Contiene propiedades y métodos comunes a todos los tipos de fichas.
  */
-abstract class Ficha {
+abstract class Ficha implements Comparable<Ficha>{
 
     /** Número de identificación único de la ficha. */
     int numeroIdentificacion;
@@ -70,5 +70,16 @@ abstract class Ficha {
     public String toString() {
         return "Número de identificación: " + numeroIdentificacion + "\n" +
                 "Título: " + titulo;
+    }
+    
+    /**
+     * Compara esta ficha con otra por su número de identificación.
+     *
+     * @param otraFicha La ficha a comparar.
+     * @return Negativo si es menor, cero si son iguales, positivo si es mayor.
+     */
+    @Override
+    public int compareTo(Ficha otraFicha) {
+        return Integer.compare(numeroIdentificacion, otraFicha.numeroIdentificacion);
     }
 }
