@@ -43,8 +43,58 @@ public class Futbolista implements Comparable<Futbolista> {
         this.edad = edad;
         this.numeroGoles = numeroGoles;
     }
+    
+    
 
-    /**
+    public int getNumeroCamiseta() {
+		return numeroCamiseta;
+	}
+
+
+
+	public void setNumeroCamiseta(int numeroCamiseta) {
+		this.numeroCamiseta = numeroCamiseta;
+	}
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	public int getEdad() {
+		return edad;
+	}
+
+
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+
+
+	public int getNumeroGoles() {
+		return numeroGoles;
+	}
+
+
+
+	public void setNumeroGoles(int numeroGoles) {
+		this.numeroGoles = numeroGoles;
+	}
+
+
+
+	/**
      * Compara este objeto Futbolista con otro objeto Futbolista.
      * Primero compara por número de camiseta y, si son iguales, compara por nombre.
      *
