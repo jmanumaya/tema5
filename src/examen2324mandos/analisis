@@ -1,0 +1,125 @@
+class Mando implements Comparable
+
+	- String modelo
+	- String anchura
+	- String altura
+	- double precio
+	- boolean encendido = false (false == apagado, true == encendido)
+	
+	Mando(modelo, anchura, altura) throws ModeloException
+	
+	Mando(modelo, anchura, altura, precio) throws ModeloException
+	
+	+ getModelo()
+	+ getAnchura()
+	+ getAltura()
+	+ getPrecio()
+	+ isEncedido()
+	
+	+ setPrecio()
+	
+	+ void onOff()
+	
+	Override:
+		
+		+ equals() -> modelo
+		+ compareTo() -> Alfabetico
+		+ toString()
+	
+
+class MandoTelevisior extends Mando implements volumen
+	
+	- int volumen = 0
+	- int canal = 1
+	
+	MandoTelevisior(modelo, anchura, altura)
+	
+	MandoTelevisior(modelo, anchura, altura, precio)
+	
+	+ getVolumen()
+	+ getCanal()
+	+ setCanal()
+	+ subirCanal()
+	+ bajarCanal()
+	
+	Override:
+	
+		+ void subirVolumen()
+		+ void bajarVolumen()
+		+ toString()
+	
+
+class MandoMinicadena extends Mando implements volumen
+
+
+	- int volumen = 0
+	
+	MandoMinicadena(modelo, anchura, altura)
+	
+	MandoMinicadena(modelo, anchura, altura, precio+)
+	
+	+ getVolumen()
+	
+	Override:
+		
+		+ void subirVolumen()
+		+ void bajarVolumen()
+		+ toString()
+	
+class MandoAspiradora extends Mando implements velocidad
+
+	- int velocidad = 0 (max 3, min 0)
+	
+	MandoAspiradora(modelo, anchura, altura)
+	
+	MandoAspiradora(modelo, anchura, altura, precio)
+	
+	+ getVelocidad()
+	
+	Override:
+	
+		+ void subirVelocidad()
+		+ void bajarVelocidad()
+		+ toString()
+	
+class MandoAire extends Mando implements velocidad
+
+	- boolean modo = false (false == frio and true == calor)
+	- int temperatura
+	- velocidad = 0 (max 5, min 0)
+	
+	MandoAire(modelo, anchura, altura)
+	
+	MandoAire(modelo, anchura, altura, precio)
+	
+	+ getModo()
+	+ getTemperatura()
+	+ getVelocidad()
+	
+	+ cambiarModo()
+	+ subirTemperatura()
+	+ bajarTemperatura()
+	
+	Override:
+	
+		+ void subirVelocidad()
+		+ void bajarVelocidad()
+		+ toString()
+		
+class ComparaPrecio implements Comparator
+
+	
+class ModeloException extends Exception
+
+Interface velocidad
+
+	+ void subirVelocidad()
+	+ void bajarVelocidad()
+	
+Interface volumen
+
+	+ void subirVolumen()
+	+ void bajarVolumen()
+
+	
+	
